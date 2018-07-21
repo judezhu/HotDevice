@@ -10,18 +10,6 @@ export default class HomeScreen extends React.Component {
     title: 'Home',
   };
 
-  handleCreate = () => {
-    console.log('Create happened');
-  }
-
-  handleSign = () => {
-    console.log('Sign happened');
-  }
-
-  handleBroadcast = () => {
-    console.log('Broadcast happened');
-  }
-
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -31,21 +19,16 @@ export default class HomeScreen extends React.Component {
           onPress={() =>
             navigate('WalletConfig')
           }
-          title="Create Wallet"
+          title="Config Wallet"
           color="#841584"
-          accessibilityLabel="Learn more about this purple button">Create Wallet</Button>
+          accessibilityLabel="Learn more about this purple button">Config Wallet</Button>
         <Button   
           onPress={() =>
             navigate('Transaction')
           }
-          title="Sign Transaction"
+          title="Create Transaction"
           color="#841584"
-          accessibilityLabel="Learn more about this purple button">Sign Message</Button>
-        <Button   
-          onPress={this.handleBroadcast}
-          title="Broadcast"
-          color="#841584"
-          accessibilityLabel="Learn more about this purple button">Sign Message</Button>
+          accessibilityLabel="Learn more about this purple button">Create Transaction</Button>
       </View>
     );
   }
